@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group mb-3">
+        <label>Número 1:</label>
+        <input [(ngModel)]="num1" type="number" class="form-control" placeholder="0">
+      </div>
+
+      <div class="form-group mb-3">
+        <label>Número 2:</label>
+        <input [(ngModel)]="num2" type="number" class="form-control" placeholder="0">
+      </div>
+
+      <!-- Opciones de radio buttons -->
+      <div class="form-check">
+        <input [(ngModel)]="operacion" class="form-check-input" type="radio" name="operacion" id="opSuma" value="sumar">
+        <label class="form-check-label" for="opSuma">Sumar</label>
+      </div>
+
+      <div class="form-check">
+        <input [(ngModel)]="operacion" class="form-check-input" type="radio" name="operacion" id="opResta" value="restar">
+        <label class="form-check-label" for="opResta">Restar</label>
+      </div>
+
+      <div class="form-check">
+        <input [(ngModel)]="operacion" class="form-check-input" type="radio" name="operacion" id="opMulti" value="multiplicar">
+        <label class="form-check-label" for="opMulti">Multiplicar</label>
+      </div>
+
+      <div class="form-check">
+        <input [(ngModel)]="operacion" class="form-check-input" type="radio" name="operacion" id="opDiv" value="dividir">
+        <label class="form-check-label" for="opDiv">Dividir</label>
+      </div>
+
+      <button (click)="calcular()" class="btn btn-primary mt-3">Calcular</button>
+    </div>
+
+    <div class="col-md-6 d-flex align-items-center">
+      <h3>Resultado: {{ resultado }}</h3>
+    </div>
+  </div>
+</div>

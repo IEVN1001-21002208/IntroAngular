@@ -1,0 +1,23 @@
+<h2>Distancia entre 2 Puntos</h2>
+
+<div>
+  <label>x1: </label>
+  <input [(ngModel)]="x1" type="number">
+  <label>y1: </label>
+  <input [(ngModel)]="y1" type="number">
+</div>
+
+<br>
+
+<div>
+  <label>x2: </label>
+  <input [(ngModel)]="x2" type="number">
+  <label>y2: </label>
+  <input [(ngModel)]="y2" type="number">
+</div>
+
+<br>
+
+<button (click)="calcular()">Calcular</button>
+
+<h3>Resultado: {{ distancia }}</h3>

@@ -1,9 +1,9 @@
 export interface IHeroes {
 
-    imagen:String;
-    nombre:String;
-    description:String;
-    race:String;
+    imagen:string;
+    nombre:string;
+    description:string;
+    race:string;
     ki:number;
 
 }
