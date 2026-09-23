@@ -1,0 +1,15 @@
+<label>Frase: </label>
+<input type="text" [(ngModel)]="frase" style="width: 300px;">
+
+<br><br>
+
+<button (click)="analizar(frase)">Analizar</button>
+
+<br><br>
+
+<h3>Resultados:</h3>
+<p><strong>Número de Vocales:</strong> {{ numVocales }}</p>
+<p><strong>Vocales:</strong> {{ vocales }}</p>
+<p><strong>Número de Consonantes:</strong> {{ numConsonantes }}</p>
+<p><strong>Consonantes:</strong> {{ consonantes }}</p>
+<p><strong>Palíndromo:</strong> {{ resultadoPalindromo }}</p>

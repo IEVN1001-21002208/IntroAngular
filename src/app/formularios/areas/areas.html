@@ -1,0 +1,22 @@
+<h2>Cálculo de Áreas</h2>
+
+<input type="radio" [(ngModel)]="figura" name="fig" value="circulo"> Círculo
+<input type="radio" [(ngModel)]="figura" name="fig" value="cuadrado"> Cuadrado
+<input type="radio" [(ngModel)]="figura" name="fig" value="rectangulo"> Rectángulo
+<input type="radio" [(ngModel)]="figura" name="fig" value="pentagono"> Pentágono
+
+<br><br>
+
+<label>Num 1 Radio, Lado o Base: </label>
+<input type="number" [(ngModel)]="num1">
+
+<br><br>
+
+<label>Num 2 Altura o Apotema: </label>
+<input type="number" [(ngModel)]="num2">
+
+<br><br>
+
+<button (click)="calcular(figura, num1, num2)">Calcular</button>
+
+<h3>Resultado: {{ resultado }}</h3>

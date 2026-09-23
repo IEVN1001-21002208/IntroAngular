@@ -1,0 +1,15 @@
+<label>Usuario: </label>
+<input type="text" [(ngModel)]="usuario">
+
+<br>
+
+<label>Contraseña: </label>
+<input type="password" [(ngModel)]="contrasenia">
+
+<br><br>
+
+<button (click)="validar(usuario, contrasenia)">Iniciar sesión</button>
+
+<br><br>
+
+<p><strong>{{ mensaje }}</strong></p>
