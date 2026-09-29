@@ -1,0 +1,91 @@
+<div style="background-color: #2b498f; color: white; font-family: 'Times New Roman', Times, serif; min-height: 100vh; display: flex; justify-content: center; padding-top: 40px;">
+  
+  <!-- Contenedor principal -->
+  <div style="width: 800px; position: relative;">
+    
+    <!-- Título superior -->
+    <div style="text-align: center; margin-bottom: 25px;">
+      <span style="background-color: #f0f0f0; color: black; padding: 2px 25px; font-size: 22px; font-weight: bold; font-style: italic; border: 2px inset white;">
+        Cinepolis
+      </span>
+    </div>
+
+    <!-- Bloques Entradas / Salidas -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+      
+      <fieldset style="border: 1px solid white; padding: 15px 15px 20px 15px; width: 48%;">
+        <legend style="color: white; font-weight: bold; font-style: italic; font-size: 18px; margin-left: 10px; padding: 0 5px;">Entradas</legend>
+        
+        <table style="width: 100%; border-spacing: 0 12px; border-collapse: separate;">
+          <tr>
+            <td style="text-align: right; padding-right: 15px; font-weight: bold; width: 45%;">Nombre</td>
+            <td><input type="text" [(ngModel)]="nombre" style="width: 100%; border: 2px inset #ccc; padding: 2px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align: right; padding-right: 15px; font-weight: bold;">Cantidad Compradores</td>
+            <td><input type="number" [(ngModel)]="cantidadCompradores" style="width: 100%; border: 2px inset #ccc; padding: 2px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align: right; padding-right: 15px; font-weight: bold;">Tarjeta Cineco</td>
+            <td style="font-weight: bold;">
+              <input type="radio" value="si" [(ngModel)]="tarjetaCineco" name="tarjeta"> Si &nbsp;&nbsp;&nbsp;
+              <input type="radio" value="no" [(ngModel)]="tarjetaCineco" name="tarjeta"> No
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: right; padding-right: 15px; font-weight: bold;">Cantidad De Boletas</td>
+            <td><input type="number" [(ngModel)]="cantidadBoletas" style="width: 100%; border: 2px inset #ccc; padding: 2px;"></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset style="border: 1px solid white; padding: 15px 15px 20px 15px; width: 42%;">
+        <legend style="color: white; font-weight: bold; font-style: italic; font-size: 18px; margin-left: 10px; padding: 0 5px;">Salidas</legend>
+        
+        <table style="width: 100%; border-spacing: 0 12px; border-collapse: separate; margin-top: 15px;">
+          <tr>
+            <td style="text-align: right; padding-right: 15px; font-weight: bold; width: 45%;">Valor a Pagar</td>
+            <td>
+              <input type="text" [value]="valorPagar | currency" readonly style="width: 100%; border: 2px inset #ccc; background-color: white; color: black; padding: 2px;">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+
+    <!-- LOGO CREADO CON CSS Y EMOJI (No requiere cargar imágenes externas) -->
+    <div style="text-align: center; margin-top: -30px; margin-bottom: 20px; position: relative; z-index: 10;">
+      <div style="display: inline-block; position: relative; text-align: center;">
+        <span style="position: absolute; font-size: 80px; left: -85px; top: -15px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));">⭐</span>
+        <span style="font-family: Arial, Helvetica, sans-serif; font-size: 65px; font-weight: bold; color: white; font-style: italic; letter-spacing: -3px; text-shadow: 2px 2px 5px rgba(0,0,0,0.6);">
+          Cinépolis
+        </span>
+        <div style="font-family: Arial, sans-serif; font-size: 14px; font-weight: normal; letter-spacing: 5px; text-transform: uppercase; margin-top: -5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+          La Capital del Cine
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloque de Acciones -->
+    <div style="text-align: center;">
+      <fieldset style="border: 1px solid white; padding: 15px 30px; display: inline-block;">
+        <legend style="color: white; font-weight: bold; font-style: italic; font-size: 18px; margin-left: 10px; padding: 0 5px;">Acciones</legend>
+        
+        <button (click)="procesar()" style="padding: 4px 25px; margin-right: 20px; font-weight: bold; color: black; background-color: #e0e0e0; border: 2px outset white; cursor: pointer;">
+          Procesar
+        </button>
+        <button (click)="salir()" style="padding: 4px 25px; font-weight: bold; color: black; background-color: #e0e0e0; border: 2px outset white; cursor: pointer;">
+          Salir
+        </button>
+      </fieldset>
+    </div>
+
+    <!-- Alerta -->
+    <div *ngIf="mensajeError" style="text-align: center; margin-top: 20px;">
+      <span style="background-color: yellow; color: red; padding: 5px 20px; font-weight: bold; border: 1px solid red; display: inline-block;">
+        {{ mensajeError }}
+      </span>
+    </div>
+
+  </div>
+</div>
